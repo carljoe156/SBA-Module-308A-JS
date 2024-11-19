@@ -46,6 +46,21 @@ header input[type="search"] {
   border: none;
 }
 
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#searchButton {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #607a97;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 /* The Main Content Section */
 .main-content {
   display: flex;
@@ -53,3 +68,5 @@ header input[type="search"] {
   gap: 20px;
   padding: 20px;
 }
+
+/* the box layout */
