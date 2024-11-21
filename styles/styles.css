@@ -2,71 +2,85 @@
 
 /* Controls header bar */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 /* Controls everything */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* May use a google font in future */
+  background-color: #f4f7fa;
+  color: #333; /*optional*/
+  margin: 0;
+  padding: 0;
+}
+/*Keeps everything contained to the middle or center of screen*/
+.container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* For the header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+/* For the presentation */
+.card {
+  border-radius: 12px; /* rounds out the corners */
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*optional shadow*/
 }
 
-header .logo {
+.card-body {
+  padding: 2rem;
+}
+
+/* Heading for the weather section */
+h3 {
   font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #074d98; /* Bootstrap blue color */
+  margin-bottom: 20px;
+}
+
+/* Input group styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group .form-control {
+  border-radius: 30px; /* Can Round out input fields */
+  padding-left: 15px; /* Spaces for the text */
+}
+
+.input-group .input-group-text {
+  border-radius: 30px; /* Round button */
+  background-color: #074d98;
+  color: #fff;
   font-weight: bold;
 }
 
-header nav ul {
-  list-style-type: none;
+/* Radio button styling */
+.form-check-label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* pages */
+#pagination {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-header input[type="search"] {
-  padding: 8px;
-  border-radius: 4px;
-  border: none;
-}
-
-#searchInput {
-  padding: 10px;
-  font-size: 16px;
-  margin-right: 10px;
-}
-
-#searchButton {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #607a97;
+button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #074d98;
   color: white;
   border: none;
   cursor: pointer;
 }
 
-/* The Main Content Section */
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+button:disabled {
+  background-color: #cccccc;
 }
-
-/* the box layout */
