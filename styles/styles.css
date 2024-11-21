@@ -10,7 +10,7 @@
 
 /* Controls everything */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* May use a google font in future */
+  /* font-family: "Satisfy", sans-serif; May use a google font in future */
   background-color: #f4f7fa;
   color: #333; /*optional*/
   margin: 0;
@@ -34,9 +34,12 @@ body {
 }
 
 /* Heading for the weather section */
+
 h3 {
-  font-size: 24px;
+  font-family: "Lobster", sans-serif;
+  font-size: 500px;
   font-weight: 500;
+  font-style: normal;
   text-align: center;
   color: #074d98; /* Bootstrap blue color */
   margin-bottom: 20px;
@@ -59,28 +62,54 @@ h3 {
   font-weight: bold;
 }
 
-/* Radio button styling */
+/* For Radio button */
 .form-check-label {
   font-size: 14px;
   color: #555;
 }
 
-/* pages */
-#pagination {
+.form-check-input {
+  margin-right: 10px;
+}
+
+/* Card content for weather details */
+.card-body p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-body strong {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Weather icon styling */
+.card-body i {
+  color: #007bff;
+  margin-left: 10px;
+}
+
+.d-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+/*For the container*/
+.vh-100 {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  align-items: center;
 }
 
-button {
-  padding: 10px 15px;
-  margin: 0 5px;
-  background-color: #074d98;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: #cccccc;
+/* Responsive Styling Options for smaller screen sizes  */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
 }
