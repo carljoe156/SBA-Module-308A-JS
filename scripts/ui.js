@@ -1,1 +1,1 @@
-// for other funcitons like doms
+// for other function like doms

@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
     />
+    <script src="scripts/script.js" defer></script>
   </head>
   <body>
     <!-- Bootstrap weather interface  HTML information -->
@@ -27,19 +28,17 @@
 
             <div class="input-group rounded mb-3">
               <input
-                type="search"
+                type="text"
                 class="form-control rounded"
-                placeholder="City"
+                id="citySearch"
+                placeholder=" Enter City"
                 aria-label="Search"
                 aria-describedby="search-addon"
               />
-              <a href="#!" type="button">
-                <span
-                  class="input-group-text border-0 fw-bold"
-                  id="search-addon"
-                >
-                  Check!
-                </span>
+              <!--Maybe you should idk enter a city for weather data-->
+              <button id="checkWeatherBtn" class="input-group-text border-0 fw-bold">
+                Check!
+              </button>
               </a>
             </div>
 
@@ -74,16 +73,20 @@
 
             <div class="card shadow-0 border">
               <div class="card-body p-4">
-                <h4 class="mb-1 sfw-normal">New York, US</h4>
-                <p class="mb-2">Current temperature: <strong>5.42°C</strong></p>
-                <p>Feels like: <strong>4.37°C</strong></p>
-                <p>
+                <h4 class="mb-1 sfw-normal" id="cityName">New York, US</h4>
+                <p class="mb-2" id="temp">
+                  Current temperature: <strong>5.42°C</strong>
+                </p>
+                <p class="feelsLike"></p>
+                <p class="maxMinTemps">
                   Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong>
                 </p>
-
                 <div class="d-flex flex-row align-items-center">
-                  <p class="mb-0 me-4">Scattered Clouds</p>
-                  <i class="fas fa-cloud fa-3x" style="color: #eee"></i>
+                  <p class="mb-0 me-4 weatherDescripton">Scattered Clouds</p>
+                  <i
+                    class="fas fa-cloud fa-3x weatherIcon"
+                    style="color: #eee"
+                  ></i>
                 </div>
               </div>
             </div>
