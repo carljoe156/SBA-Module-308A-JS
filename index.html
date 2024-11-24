@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Your Weather App</title>
+    <!-- Bootstrap CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
+    <!-- Your custom CSS -->
     <link rel="stylesheet" href="styles/styles.css" />
-    <!-- This links my MDBootstrap CSS  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
@@ -19,29 +20,39 @@
     <script src="scripts/script.js" defer></script>
   </head>
   <body>
-    <!-- Bootstrap weather interface  HTML information -->
+    <!-- Dark mode toggle button if you dare -->
+    <!-- <button id="darkModeToggle" class="btn btn-primary">
+      Toggle Dark Mode
+    </button> -->
+    <!--For background videos-->
+    <video id="weatherBackground" autoplay muted loop>
+        <source id="videoSource" src="" type="video/mp4" />
+      </video>
+    <!-- Main weather app container -->
     <section class="vh-100">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-8 col-lg-6 col-xl-4">
+            <!-- Title Heading -->
             <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3>
 
+            <!-- Input group for city search -->
             <div class="input-group rounded mb-3">
               <input
                 type="text"
                 class="form-control rounded"
                 id="citySearch"
-                placeholder=" Enter City"
+                placeholder="Enter City"
                 aria-label="Search"
                 aria-describedby="search-addon"
               />
-              <!--Maybe you should idk enter a city for weather data-->
-              <button id="checkWeatherBtn" class="input-group-text border-0 fw-bold">
+              <button
+                id="checkWeatherBtn"
+                class="input-group-text border-0 fw-bold"
+              >
                 Check!
               </button>
-              </a>
             </div>
-
             <div class="mb-4 pb-2">
               <div class="form-check form-check-inline">
                 <input
@@ -49,7 +60,7 @@
                   type="radio"
                   name="inlineRadioOptions"
                   id="inlineRadio1"
-                  value="option1"
+                  value="Celsius"
                   checked
                 />
                 <label class="form-check-label" for="inlineRadio1"
@@ -63,7 +74,7 @@
                   type="radio"
                   name="inlineRadioOptions"
                   id="inlineRadio2"
-                  value="option2"
+                  value="Fahrenheit"
                 />
                 <label class="form-check-label" for="inlineRadio2"
                   >Fahrenheit</label
@@ -71,22 +82,34 @@
               </div>
             </div>
 
+            <!-- Card for weather details -->
             <div class="card shadow-0 border">
               <div class="card-body p-4">
-                <h4 class="mb-1 sfw-normal" id="cityName">New York, US</h4>
+                <h4 class="mb-1" id="cityName"><strong>York, US</strong></h4>
                 <p class="mb-2" id="temp">
-                  Current temperature: <strong>5.42°C</strong>
+                  Current temperature: <strong>--°C</strong>
                 </p>
-                <p class="feelsLike"></p>
-                <p class="maxMinTemps">
-                  Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong>
+                <p class="feelsLike" id="feelsLike">
+                  Feels Like: <strong>--°C</strong>
+                </p>
+                <p class="maxMinTemps" id="maxMinTemps">
+                  MaxTemperature:<strong>--°C</strong>, MinTemperature:
+                  <strong>--°C</strong>
+                </p>
+                <p class="humidity" id="humidity">
+                  Humidity: <strong>--%</strong>
+                </p>
+                <p class="windSpeed" id="windSpeed">
+                  Wind Speed: <strong>--m/s</strong>
+                </p>
+                <p class="pressure" id="pressure">
+                  Pressure: <strong>--hPa</strong>
                 </p>
                 <div class="d-flex flex-row align-items-center">
-                  <p class="mb-0 me-4 weatherDescripton">Scattered Clouds</p>
-                  <i
-                    class="fas fa-cloud fa-3x weatherIcon"
-                    style="color: #eee"
-                  ></i>
+                  <p class="mb-0 me-4" id="weatherDescription">
+                    Weather: <strong>--</strong>
+                  </p>
+                  <img id="weatherIcon" style="width: 100px; height: 100px" />
                 </div>
               </div>
             </div>
@@ -95,10 +118,18 @@
       </div>
     </section>
 
-    <!-- I'n using MDBootstrap JS for the interface -->
+    <!-- Bootstrap JS -->
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
     ></script>
+    <footer style="text-align: center; padding: 20px; background-color: #f1f1f1; border-top: 2px solid #ccc;">
+        <div class="phone" style="margin-bottom: 10px;">
+            Phone Number: (195)-182-2518<br>
+            Address: 1234 Main Street, New York, NY, 10002
+        </div>
+        <div class="website">
+            <p style="margin: 0;">2024 ServeSpoon Corporation all rights reserved.</p>
+        </div>
   </body>
 </html>
