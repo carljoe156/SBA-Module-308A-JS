@@ -16,6 +16,29 @@ entirely up to you; be creative!
 Creativity and e ort always work in your favor, so feel free to go beyond the scope of the listed 
 requirements if you have the time.</p>
 
+## WeatherStar
+
+**WeatherStar** is your go-to weather companion! Check the weather in any city, anytime, with just a few clicks.
+
+## Features
+
+- **City Search**: Enter a city name to get up-to-date weather information.
+- **Real-Time Weather Data**: Displays the current temperature, humidity, wind speed, and atmospheric pressure.
+- **Unit Conversion**: Toggle between Celsius and Fahrenheit for your temperature readings.
+- **Weather Descriptions**: Get detailed weather conditions, like whether it's sunny, rainy, or cloudy, complete with a weather icon.
+- **Elegant and Interactive UI**: A user-friendly, visually appealing design that makes checking the weather a breeze.
+
+Whether you're planning a sunny day out or preparing for a storm, **WeatherStar** keeps you informed with live updates and easy-to-understand data.
+
+## How It Works
+
+1. Enter a city in the search bar.
+2. Hit **Check!** to retrieve the current weather information.
+3. Choose your preferred temperature unit (Celsius or Fahrenheit).
+4. Enjoy a beautifully updated UI with all the relevant details to help you plan your day.
+
+Stay ahead of the weather with **WeatherStar**! 🌤️🌧️🌞
+
 ## Requirements
 
 | Requirement                                                                                                                                                                                        | Weight |
@@ -31,5 +54,3 @@ requirements if you have the time.</p>
 | Commit frequently to the git repository.                                                                                                                                                           | 5%     |
 | Include a README file that contains a description of your application.                                                                                                                             | 2%     |
 | Level of effort displayed in creativity, presentation, and user experience.                                                                                                                        | 5%     |
-
-## Future Enhancement
