@@ -1,35 +1,67 @@
 /* Customized to fit Bootstrap */
 /* Controls everything */
+html,
 body {
   /* font-family: "Satisfy", sans-serif; May use a google font in future */
-  background-color: #f4f7fa;
-  color: #333; /*optional*/
+  height: 100vh;
+  /* overflow: hidden; */
   margin: 0;
   padding: 0;
+}
+body {
+  background-color: #f4f7fa;
 }
 /*Keeps everything contained to the middle or center of screen*/
 .container {
   max-width: 600px;
   margin: 0 auto;
+  padding: 0;
+  height: 100%;
+}
+
+/* Background image */
+.image-container {
+  width: 100%;
+  height: 100vh; /* Make sure it covers the full viewport */
+  background-image: url("https://images.unsplash.com/photo-1594005039392-53c38b667641?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover; /* Helps keep the the background image covering the container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
+  position: absolute; /* To make sure it stays behind everything */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensures the image is behind the content */
+}
+
+section.vh-100 {
+  position: relative; /* Make sure content stays above the image */
+  z-index: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* For the presentation */
 .card {
   border-radius: 12px; /* rounds out the corners */
   background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*optional shadow*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*adds a shadow*/
+  box-sizing: border-box;
 }
 
 .card-body {
   padding: 2rem;
 }
 
-/* Heading for the weather section */
+/* Heading for weather section */
 
 h3 {
   font-family: "Lobster", sans-serif;
   font-size: 500px;
-  font-weight: 500;
+  font-weight: 500px;
   font-style: normal;
   text-align: center;
   color: #074d98; /* Bootstrap blue color */
@@ -42,8 +74,8 @@ h3 {
 }
 
 .input-group .form-control {
-  border-radius: 30px; /* Can Round out input fields */
-  padding-left: 15px; /* Spaces for the text */
+  border-radius: 30px;
+  padding-left: 15px;
 }
 
 .input-group .input-group-text {
@@ -67,11 +99,14 @@ h3 {
 .card-body p {
   font-size: 16px;
   margin-bottom: 10px;
+  font-style: italic;
 }
-
+/* City Header */
 .card-body strong {
-  font-weight: 600;
-  color: #007bff;
+  font-weight: 600px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600px;
+  color: #271c82;
 }
 
 /* Weather icon styling */
@@ -84,12 +119,16 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
-/*For the container*/
+/* For the container */
 .vh-100 {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* Responsive Styling Options for smaller screen sizes  */

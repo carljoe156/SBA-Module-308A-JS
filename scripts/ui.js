@@ -33,17 +33,19 @@ export const updateWeatherUI = (data, unit = "Celsius") => {
   }
 
   // Updates the UI with the weather data
-  cityNameElement.textContent = data.name;
+  cityNameElement.textContent = `${data.name}, ${data.sys.country}`;
   tempElement.textContent = `Current temperature: ${temp.toFixed(2)}°${
-    unit[0]
+    unit === "Celsius" ? "C" : "F"
   }`;
   feelsLikeElement.textContent = `Feels like: ${feelsLike.toFixed(2)}°${
-    unit[0]
+    unit === "Celsius" ? "C" : "F"
   }`;
-  humidityElement.textContent = `Humidity: ${data.main.humidity}%`;
-  windSpeedElement.textContent = `Wind speed: ${data.wind.speed} m/s`;
-  pressureElement.textContent = `Pressure: ${data.main.pressure} hPa`;
-  weatherDescriptionElement.textContent = `Description: ${data.weather[0].description}`;
+  humidityElement.textContent = `Humidity: ${data.main.humidity || "N/A"}%`;
+  windSpeedElement.textContent = `Wind speed: ${data.wind.speed || "N/A"} m/s`;
+  pressureElement.textContent = `Pressure: ${data.main.pressure || "N/A"} hPa`;
+  weatherDescriptionElement.textContent = `Description: ${
+    data.weather[0].description || "N/A"
+  }`;
   weatherIconElement.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
   // Updates the Max and Min Temperatures

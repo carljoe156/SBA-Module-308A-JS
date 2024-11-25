@@ -24,10 +24,15 @@
     <!-- <button id="darkModeToggle" class="btn btn-primary">
       Toggle Dark Mode
     </button> -->
-    <!--For background videos-->
-    <video id="weatherBackground" autoplay muted loop>
+    <!--For background image-->
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1594005039392-53c38b667641?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Green trees near body of water">
+      <p>Image by <a href="https://unsplash.com/@hoani_l" target="_blank">Hoani L.</a> on Unsplash</p>
+    </div>
+  <!--For background videos-->
+    <!-- <video id="weatherBackground" autoplay muted loop>
         <source id="videoSource" src="" type="video/mp4" />
-      </video>
+      </video> -->
     <!-- Main weather app container -->
     <section class="vh-100">
       <div class="container py-5 h-100">
@@ -85,7 +90,7 @@
             <!-- Card for weather details -->
             <div class="card shadow-0 border">
               <div class="card-body p-4">
-                <h4 class="mb-1" id="cityName"><strong>York, US</strong></h4>
+                <h4 class="mb-1" id="cityName"><strong> --, --</strong></h4>
                 <p class="mb-2" id="temp">
                   Current temperature: <strong>--°C</strong>
                 </p>
